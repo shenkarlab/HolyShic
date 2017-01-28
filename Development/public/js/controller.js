@@ -54,7 +54,7 @@ app.controller('myCtrl', function($scope, $http){
         angular.forEach(model.chosenBook, function (chapter){
             if(chapter.chapterNo==chosenChapter)
                 $scope.currentChapter = chapter.data;
-        })
+        });
     }
 });
 
