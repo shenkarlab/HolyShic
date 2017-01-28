@@ -1,0 +1,22 @@
+Run on Console WebService
+node index.js
+
+
+Examples Inputs:
+
+// Get Books Grades By Religion
+http://localhost:3000/getBooksByReligion/The Old Testament
+http://localhost:3000/getBooksByReligion/The New Testament
+http://localhost:3000/getBooksByReligion/Qoran
+
+
+// Get Chapter Grades By Book (unique)
+http://localhost:3000/getChaptersByBook/Leviticus
+http://localhost:3000/getChaptersByBook/Matthew
+http://localhost:3000/getChaptersByBook/Book 4
+
+
+// Get Words Counter By Religion
+http://localhost:3000/getCountByReligion/The Old Testament
+http://localhost:3000/getCountByReligion/The New Testament
+http://localhost:3000/getCountByReligion/Qoran

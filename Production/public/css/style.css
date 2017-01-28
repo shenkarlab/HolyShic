@@ -1,0 +1,294 @@
+*{
+	padding : 0 ;
+	margin : 0 ;
+}
+
+
+
+#selectedLink {
+    color: #1daa8f;
+}
+
+#selectedSort {
+	text-decoration: underline;
+}
+
+label {
+	font-weight: lighter;
+	color: #fff;
+	font-size: 13px;
+	margin-top: 60px;
+	display: block;
+}
+
+body{
+	background-color: #000;
+}
+
+#header{
+	width : inherit;
+	height: 20px;
+/*	border : 1px solid red;*/
+}
+
+#wrapper{
+/*    border : 1px solid red;*/
+	margin: 0px auto;
+/*	width: 98%;*/
+}
+
+#wrapper2{
+/*    width : 550px;*/
+/*    height : 480px;*/
+/*    border : 1px solid red;*/
+    padding : 1%;
+/*    border-bottom: 2px solid #c6c6c6;*/
+}
+
+#nav , #menu{
+	float: left;
+/*    border : 1px solid blue;*/
+}
+
+
+header{
+    padding : 1%;
+/*    border : 1px solid #f2d744;*/
+}
+
+
+graph , quote{
+    display: block;
+    width : 100%;
+    height : 140px;
+/*    border : 1px solid red;*/
+}
+
+
+.sort{
+    display: inline;
+    float: right;
+}
+
+.sort h4{
+    color : #fff;
+    display: inline;
+}
+
+.sort a{
+    text-decoration : underline;
+    color: #fff;
+}
+
+header h2, header h3{
+   padding: 2%;
+    display: inline;
+}
+
+header h3{
+    color : #cecece;
+}
+
+#nav{
+    padding-top: 3%;
+/*	border : 1px solid green;*/
+/*    padding-left : 5%;*/
+	width : 15%;
+}
+
+#nav a , #nav label , #nav #logo{
+    margin-left: 50px;
+}
+
+#logo {
+	background-image: url("../images/logo.png");
+	background-size: 53px 50px;
+	background-repeat: no-repeat;
+	width: 53px;
+	height: 50px;
+/*	border : 1px solid green;*/
+    margin-bottom: 22%;
+}
+
+#nav a{
+
+}
+
+.bookSchema {
+	float: left;
+	width: 18%;
+/*	height: inherit;*/
+}
+
+.descriptions{
+    float : left;
+    width : 45%;
+    height : 100vh;
+}
+
+.bookGraph1 , .bookGraph2 , .bookGraph3 {
+/*    border : 1px solid #c63333;*/
+    text-align: center;
+}
+
+graph svg{
+    position: absolute;
+    left:0;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transform-origin: 50% 15% ;
+}
+
+graph > .bookGraph1{
+/*    bottom : 27.2%;*/
+/*    left : 26%;*/
+/*    position: absolute;*/
+/*    width : 23%;*/
+/*    border : 1px solid #e0e0e0;*/
+/*    text-align: center;*/
+    height : 200px;
+    position: relative;
+}
+
+quote h1, quote p{
+    padding : 2%;
+    font-size : 90%;
+}
+
+quote h1{
+    color : #fff;
+    margin-top: 60px;
+}
+
+quote p{
+    color : #fff;
+/*    border-bottom: 2px solid #dbd9d9;*/
+}
+
+.bookSchema h1, h2, h3 {
+/*    border: 1px solid #1ca551;*/
+    padding: 3%;
+    text-align: center;
+/*    margin: auto;*/
+    color: #fff;
+	font-weight: normal;
+	font-size: 15px;
+/*    padding: 13%;*/
+/*    text-align: center;*/
+}
+
+.bookDetail{
+    width : 100%;
+    height : 342px;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.bookDetail iframe{
+    border : none;
+    width : 100%;
+    height : 100%;
+}
+
+#menu {
+    width : 83%;
+/*    border : 1px solid white;*/
+}
+
+.linkMenu {
+	text-decoration: none;
+	color: #fff;
+	float: left;
+	width: 200px;
+	margin-top: 10px;
+    font-weight: 700;
+}
+
+.linkSort {
+	text-decoration: none;
+	color: #fff;
+	float: left;
+	width: 200px;
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+.clear{
+	clear:both;
+}
+
+.tooltip:hover{
+    background-color: #fff;
+    color : #fff;
+/*    width : 20px;*/
+/*    height : 20px;*/
+    position: relative;
+    display: inline-block;
+/*    border-bottom: 1px dotted red;*/
+}
+
+/* Graph Style */
+rect{
+    cursor: pointer;
+    transition: 0.15s ease-in;
+}
+
+rect:hover{
+    fill : #bfbfbf;
+/*    border : 2px solid red;*/
+}
+
+
+.bar2 {
+    fill: #b72c2c;
+}
+
+.bar{
+    fill: #1daa8f;
+/*    width : 20%;*/
+/*    width : 30px;*/
+
+}
+
+
+
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.ch_no a{
+    z-index: 999;
+    text-decoration: none;
+    display: inline;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ch_no a:hover{
+
+}
+
+
+.ch_no{
+    position: absolute;
+    margin-top : 20px;
+    z-index: 999;
+    cursor: pointer;
+    font-size:60%;
+    line-height: 3px;
+    width : 3px;
+    height : 3px;
+    color : #fff;
+    padding : 0.7%;
+    border-radius: 50px;
+}
+
+.ch_no:hover{
+    background-color: #c9c9c9;
+}

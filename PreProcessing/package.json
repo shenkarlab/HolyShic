@@ -1,0 +1,16 @@
+{
+  "name": "gal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "line-by-line": "^0.1.5",
+    "mongoose": "^4.7.7"
+  },
+  "devDependencies": {},
+  "description": ""
+}

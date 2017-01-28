@@ -1,0 +1,1 @@
+var mongoose=require("mongoose"),schema=mongoose.Schema,bookSchema=new schema({name:{type:String,requried:!0},bookNo:Number,religion:String,negative:Number,positive:Number},{collection:"bibleBooks"}),Book=mongoose.model("Book",bookSchema);module.exports=Book;

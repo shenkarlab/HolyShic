@@ -1,0 +1,1 @@
+var mongoose=require("mongoose"),db=mongoose.connect("mongodb://db_usr:db_pass@ds023550.mlab.com:23550/db_ringapp2016_g"),Word=require("./define_schema"),conn=mongoose.connection;conn.on("error",function(a){console.log("Connection Error"+a)}),conn.once("open",function(){console.log("Connected Successfully to MongoDB")});
