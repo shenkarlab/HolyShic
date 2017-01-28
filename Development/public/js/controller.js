@@ -2,19 +2,19 @@ var app = angular.module('app',[]);
 var model = {};
 
 app.run(function($http){   // Get All "The Old Testament" Books
-    $http.get("http://localhost:3000/getBooksByReligion/The Old Testament").then(function(response){
+    $http.get("https://holychicapp.herokuapp.com/getBooksByReligion/The Old Testament").then(function(response){
         model.OldTestament = response.data;
     })
 });
 
 app.run(function($http){   // Get All "The New Testament" Books
-    $http.get("http://localhost:3000/getBooksByReligion/The New Testament").then(function(response){
+    $http.get("https://holychicapp.herokuapp.com/getBooksByReligion/The New Testament").then(function(response){
         model.NewTestament = response.data;
     })
 });
 
 app.run(function($http){   // Get All "Qoran" Books
-	$http.get("http://localhost:3000/getBooksByReligion/Koran").then(function(response){
+	$http.get("https://holychicapp.herokuapp.com/getBooksByReligion/Koran").then(function(response){
 		model.Koran = response.data;
 	})
 });
@@ -37,7 +37,7 @@ app.controller('myCtrl', function($scope, $http){
         $scope.bookName = bookName;
         $scope.religionName = religion;
         // Get Chapters by BookName
-        $http.get("http://localhost:3000/getChaptersByBook/"+bookName+"").then(function(response){
+        $http.get("https://holychicapp.herokuapp.com/getChaptersByBook/"+bookName+"").then(function(response){
 		    model.chosenBook = response.data;
             // OnLoad "GET" => Open First Chapter
             if(model.chosenBook)

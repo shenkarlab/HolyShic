@@ -18,7 +18,6 @@ app.use(function(req, res, next){
 /*** All routes ***/
 app.get('/getBooksByReligion/:religion', db.getBooksByReligion);
 app.get('/getChaptersByBook/:book', db.getChaptersByBook);
-app.get('/getWordsByBook/:book', db.getWordsByBook);
 
 app.listen(port);
 console.log("listening on port " + port);
