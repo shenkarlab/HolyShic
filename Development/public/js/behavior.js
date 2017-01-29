@@ -33,24 +33,19 @@ $(function() {
 
     // Control on -> Enable / Disable / Resize - Graphs
     var resizeGraph = function() {
-
-//        $(".linkBook").on("click", function(){
-//            alert(this.id);
-//        });
-
         // Need to make this generic to final project
         $(".linkBook1").on("click", function(){
             if(showBook1){
                 showBook1 = 0;
                 $("#oldTestament").hide();
                 $(".titleBook1").hide();
-                $(".eye1").css("background-image", "url('../public/images/closed_eye_icon.png')");
+                $(".eye1").css("background-image", "url('../dev1/images/closed_eye_icon.png')");
             }
             else {
                 showBook1 = 1;
                 $("#oldTestament").show();
                 $(".titleBook1").show();
-                $(".eye1").css("background-image", "url('../public/images/open_eye_icon.png')");
+                $(".eye1").css("background-image", "url('../dev1/images/open_eye_icon.png')");
             }
             resizeObjects();
         });
@@ -60,13 +55,13 @@ $(function() {
                 showBook2 = 0;
                 $("#newTestament").hide();
                 $(".titleBook2").hide();
-                $(".eye2").css("background-image", "url('../public/images/closed_eye_icon.png')");
+                $(".eye2").css("background-image", "url('../dev1/images/closed_eye_icon.png')");
             }
             else {
                 showBook2 = 1;
                 $("#newTestament").show();
                 $(".titleBook2").show();
-                $(".eye2").css("background-image", "url('../public/images/open_eye_icon.png')");
+                $(".eye2").css("background-image", "url('../dev1/images/open_eye_icon.png')");
             }
             resizeObjects();
         });
@@ -76,13 +71,13 @@ $(function() {
                 showBook3 = 0;
                 $("#koran").hide();
                 $(".titleBook3").hide();
-                $(".eye3").css("background-image", "url('../public/images/closed_eye_icon.png')");
+                $(".eye3").css("background-image", "url('../dev1/images/closed_eye_icon.png')");
             }
             else{
                 showBook3 = 1;
                 $("#koran").show();
                 $(".titleBook3").show();
-                $(".eye3").css("background-image", "url('../public/images/open_eye_icon.png')");
+                $(".eye3").css("background-image", "url('../dev1/images/open_eye_icon.png')");
             }
             resizeObjects();
         });
