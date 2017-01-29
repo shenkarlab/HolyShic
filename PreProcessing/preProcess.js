@@ -1,4 +1,3 @@
-
 var mongoose = require('mongoose');
 var db = mongoose.connect('mongodb://db_usr:db_pass@ds023550.mlab.com:23550/db_ringapp2016_g');
 var Word = require('./defineSchema/Word');
@@ -23,7 +22,6 @@ var chapterSumPos = 0;
 
 var religionName;
 var bookName;
-var startParse = 0;
 var runOnce = 1;
 
 
@@ -67,13 +65,11 @@ lr.on('line', function (line) {
 
 		bookName = cleanBookName;
 		chapterCount = 1;
-		startParse = 0;
         lr.resume();
 	}
 
 	// Recognize Chapter + Phrase
 	if(parseInt(line[0])) {
-		startParse = 1;
 		chapterInt = parseInt(line[0]);
 		// Check Double Digit
 		if(parseInt(line[1])>=0){
@@ -106,7 +102,7 @@ lr.on('line', function (line) {
 	console.log (line);
 
 	// Check if Words Should Added to DB
-	if((line!="")&&(startParse==1)){
+	if(line!=""){
         chapterData += line;
 		var words = line.split(/[\s.,;:]+/);
 		for(i=0; i<words.length; i++){
