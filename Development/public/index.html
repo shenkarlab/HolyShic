@@ -160,7 +160,6 @@
                     </div>
                 </a>
             </div>
-
         </div> <!-- Close Menu -->
 
 
@@ -176,7 +175,7 @@
                 <a id="selectedSortChap" class="sortOpt" href="">
                     <h3 id="selectedSort">{{sortChapterName}}</h3>
                 </a>
-                <h4>Sort by</h4>
+<!--                <h4>Sort by</h4>-->
                 <div id="sortsOpt" class="sortsOpt">
                     <a href="" class="sortOpt" ng-click="sortChapter='chapterNo'; sortChapterName='Chronological'" id="selectedSort">Chronological</a>
                     <div class="clear"></div>
@@ -196,14 +195,14 @@
 -->
                         <a href="#" class="fuck">
                             <svg style="-ms-transform: scaleY(-1); -webkit-transform: scaleY(-1); transform: scaleY(-1);" width="7" height="40px">
-                                <rect width="20" height="{{chapter.positive/2+1}}" style="fill: #6699cc;">
+                                <rect width="20" height="{{chapter.positive/2+1}}" style="fill: #6699cc;"/>
                             </svg>
 
                             <h5 ng-click="showChapter(bookName, chapter.chapterNo);" class="chapterNum">
                                 {{chapter.chapterNo}}
                             </h5>
                             <svg width="7" height="40">
-                                <rect width="20" height="{{chapter.negative/2+1}}" style="fill: #e84949;">
+                                <rect width="20" height="{{chapter.negative/2+1}}" style="fill: #e84949;"/>
                             </svg>
                             <svg ng-show="chapter.chapterNo==selectedChapter" style="margin-left:-47px; margin-top: -113px;">
                                 <circle cx="50" cy="50" r="6" fill="rgba(0, 0, 0, 0.2)" />
@@ -216,6 +215,7 @@
             <h2 id="chapterTitle">
                 Chapter {{selectedChapter}}
             </h2>
+            <div class="clear"></div>
 
             <div id="contentChapter" class="context">
                 <p ng-bind-html="currentChapter | highlight:'words'">{{currentChapter}}</p>
@@ -224,8 +224,6 @@
         </div> <!-- Close Book Details -->
 
     </div> <!-- Close Wrapper -->
-
-<!--    <script src='js/remark.js'></script>-->
     <script src='js/behavior.js'></script>
 
 </body>

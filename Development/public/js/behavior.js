@@ -119,10 +119,17 @@ $(function() {
     // Control on -> Enable / Disable Hover Graph Line
     var graphLineHover = function() {
         $(document).on('mouseover','.graphLine',function() {
-            $(this).children("span").css("display", "block");
+            $(this).children("span").show(200);
+            $(this).children("span").css("position","relative");
+            $(this).children("span").css("top","20px");
+            $(this).children("span").css("left","15px");
+            $(this).children("span").css("font-size","10px");
+            $(this).children("span").css("color","#000");
+//            $(this).children("span").css("display", "block");
         });
         $(document).on('mouseleave','.graphLine',function() {
-            $(this).children("span").css("display", "none");
+            $(this).children("span").hide(200);
+//            $(this).children("span").css("display", "none");
         });
     }
 
