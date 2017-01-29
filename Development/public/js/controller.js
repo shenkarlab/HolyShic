@@ -58,11 +58,24 @@ app.controller('myCtrl', function($scope, $http){
     }
 });
 
-app.filter('highlight', function($sce) {
-    return function(text, phrase) {
-      if (phrase) currentChapter = text.replace(new RegExp('('+phrase+')', 'gi'),
-        '<span class="highlighted">$1</span>')
 
-      return $sce.trustAsHtml(text)
+
+
+var posKeywords = ["mercy ", "merciful ", "love ", "loves ", "loving", "loved", "heaven ", "heavens ", "happy", "peace", "calm ", "bless", "blessed ", "blessing ", "happiness", "married", "marriage", "marry ", "graced", "hope", "joy ", "joyed", "kindness", "trust", "trusts", "trusted", "tolerate", "trustful", "united", "unity"];
+
+var negKeywords = ["kill ", "hate ", "prison ", "murder ", "kills ", "hates ", "prisoners ", "adultery ", "death", " anger ", "angry ", " angers ", "fear ", "feared ", " die ", " died ", "death ", " dies ", "sad ", "sadness ", "war ", "wars", "hater ", "rape ", "raped", "rapes", "rapist", "revenge", "revenged", "killing", "killed", "persecute ", "grief ", "grieves ", " hell ", " lie ", " lies ", " lied ", "lying ", "murderer ", "murdered ", "murders ", " sin ", "sinned "];
+
+
+app.filter('highlight', function($sce) {
+    return function(currentChapter, phrase) {
+        for(i=0; i<posKeywords.length; i++){
+          if (phrase) currentChapter = currentChapter.replace(new RegExp('('+posKeywords[i]+')', 'gi'),
+            '<span class="posHighlight">$1</span>')
+        }
+        for(i=0; i<negKeywords.length; i++){
+          if (phrase) currentChapter = currentChapter.replace(new RegExp('('+negKeywords[i]+')', 'gi'),
+            '<span class="negHighlight">$1</span>')
+        }
+        return $sce.trustAsHtml(currentChapter)
     }
   })
