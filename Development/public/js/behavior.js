@@ -37,14 +37,14 @@ $(function() {
         $(".linkBook1").on("click", function(){
             if(showBook1){
                 showBook1 = 0;
-                $("#oldTestament").hide();
-                $(".titleBook1").hide();
+                $("#oldTestament").hide(200);
+                $(".titleBook1").hide(200);
                 $(".eye1").css("background-image", "url('../dev1/images/closed_eye_icon.png')");
             }
             else {
                 showBook1 = 1;
-                $("#oldTestament").show();
-                $(".titleBook1").show();
+                $("#oldTestament").show(200);
+                $(".titleBook1").show(200);
                 $(".eye1").css("background-image", "url('../dev1/images/open_eye_icon.png')");
             }
             resizeObjects();
@@ -53,14 +53,14 @@ $(function() {
         $(".linkBook2").on("click", function(){
             if(showBook2){
                 showBook2 = 0;
-                $("#newTestament").hide();
-                $(".titleBook2").hide();
+                $("#newTestament").hide(200);
+                $(".titleBook2").hide(200);
                 $(".eye2").css("background-image", "url('../dev1/images/closed_eye_icon.png')");
             }
             else {
                 showBook2 = 1;
-                $("#newTestament").show();
-                $(".titleBook2").show();
+                $("#newTestament").show(200);
+                $(".titleBook2").show(200);
                 $(".eye2").css("background-image", "url('../dev1/images/open_eye_icon.png')");
             }
             resizeObjects();
@@ -69,14 +69,14 @@ $(function() {
         $(".linkBook3").on("click", function(){
             if(showBook3){
                 showBook3 = 0;
-                $("#koran").hide();
-                $(".titleBook3").hide();
+                $("#koran").hide(200);
+                $(".titleBook3").hide(200);
                 $(".eye3").css("background-image", "url('../dev1/images/closed_eye_icon.png')");
             }
             else{
                 showBook3 = 1;
-                $("#koran").show();
-                $(".titleBook3").show();
+                $("#koran").show(200);
+                $(".titleBook3").show(200);
                 $(".eye3").css("background-image", "url('../dev1/images/open_eye_icon.png')");
             }
             resizeObjects();

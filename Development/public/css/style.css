@@ -71,7 +71,7 @@ body{
 
 #logo {
 	background-image: url("../images/new%20logo.png");
-	background-size: 75px 70px;
+	background-size: 70px 70px;
 	background-repeat: no-repeat;
 	width: 75px;
 	height: 70px;
@@ -95,6 +95,7 @@ body{
 }
 
 .linkBook {
+    transition: 0.2s ease-in;
     float: left;
 	text-decoration: none;
 	color: #000;
@@ -114,6 +115,7 @@ body{
 }
 
 .linkSort {
+    transition: 0.2s ease-in;
 	text-decoration: none;
 	color: #000;
 	float: left;
