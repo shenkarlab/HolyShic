@@ -18,7 +18,7 @@ $(function() {
                 descriptionOpen = 1;
                 $("#menu").css("width", "71%");
                 $("#menu").css("padding-left", "13%");
-                $(".bookDetails").css("display", "block");
+                $(".bookDetails").css("right", "0%");
             }
         });
 
@@ -26,7 +26,7 @@ $(function() {
             descriptionOpen = 0;
             $("#menu").css("width", "100%");
             $("#menu").css("padding-left", "20%");
-            $(".bookDetails").css("display", "none");
+            $(".bookDetails").css("right", "-35%");
         });
     }
 
@@ -120,11 +120,9 @@ $(function() {
             $(this).children("span").css("left","15px");
             $(this).children("span").css("font-size","10px");
             $(this).children("span").css("color","#000");
-//            $(this).children("span").css("display", "block");
         });
         $(document).on('mouseleave','.graphLine',function() {
             $(this).children("span").hide(200);
-//            $(this).children("span").css("display", "none");
         });
     }
 
