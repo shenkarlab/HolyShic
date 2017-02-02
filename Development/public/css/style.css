@@ -199,7 +199,6 @@ body{
 
 .bookDetails{
     transition: 0.2s ease-in;
-/*    display: none;*/
     width : 35%;
     position: fixed;
     z-index: 1;
@@ -208,7 +207,6 @@ body{
     bottom: 0;
     padding: 30px;
     background: rgba(128, 128, 128, 0.1);
-/*    transition: 0.3s;*/
 }
 
 .bookDetails h1{
@@ -366,20 +364,36 @@ body{
 /*----- Responsive Style -----*/
 
 @media only screen and (max-width: 1120px) {
+    #header {
+        width : 100%;
+        height: 20%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.5); /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(rgba(255, 255, 255, 2),rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(rgba(255, 255, 255, 2),rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(rgba(255, 255, 255, 2),rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(rgba(255, 255, 255, 2),rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Standard syntax */
+    }
+
     a#selectedSortChap {
         position: absolute;
         left : 15%;
-        top:11.5%;
+        top : 13%;
     }
 
     #chapterTitle{
-        margin-top: 12vh;
+        margin-top: 1vh;
         display: block;
     }
 
     #nav{
-        width : 20%;
-        padding-top: 4%;
+        width : 100%;
+        height : 30%;
+/*        padding-top: 16%;*/
         padding-left: 0%;
         position: fixed;
         z-index: 1;
@@ -389,7 +403,7 @@ body{
     }
 
     #logo {
-        position: absolute;
+/*        position: absolute;*/
         top : 5px;
         left : 0px;
         background-size: 55px 50px;
@@ -411,19 +425,25 @@ body{
     }
 
     .bookSchema {
+        margin-top: 35%;
         text-align: center;
         display: block;
         width: 100%;
     }
 
     .graphLine {
-        width: 80%;
-        float: right;
+        margin-left:9%;
+        width: 100%;
+/*        float: right;*/
     }
 
     .bookSchema h1 {
+        position: absolute;
+        left : 30%;
+/*        top: 13%;*/
+        padding-top: 0%;
         text-align: center;
-        left : 17%;
+        margin-top: 35%;
     }
 
     .titleBook3, .titleBook2{
@@ -431,8 +451,12 @@ body{
     }
 
     .bookBox{
-        margin-top: 25px;
-        width : 100%;
+        float: left;
+        width: auto;
+        height: 50px;;
+        margin-right: 6%;
+/*        width : 100%;*/
+        display: inline-block;
 
     }
 
@@ -440,13 +464,56 @@ body{
         margin-top: 3.8%;
     }
 
-    .hoverName {
-        position: relative;
-        top : 20px;
-        left : 25px;
-        font-size: 10px;
+    .linkSort {
+        transition: 0.2s ease-in;
+        text-decoration: none;
         color: #000;
-        display: none;
+        float: left;
+        width: 80px;
+        margin-right:4%;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .clear{
+        clear: none;
+    }
+
+    .bookDetails{
+        position: fixed;
+        bottom: -50%;
+        width : 100%;
+        top: auto;
+        right: 0%;
+        background: #e6e6e6;
+        height: 50%;
+        padding: 1%;
+    }
+
+    #headerBook{
+        height: auto;
+        margin-bottom: 3%;
+    }
+
+    #headerBook a{
+        width: auto;
+        margin-top: -4px;
+        margin-left: 215px;
+    }
+
+    #selectedSortChap{
+        float: right;
+        width: auto;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
+    #closeX{
+        position: absolute;
+        width: 10px;
+        float: left;
+        margin-left: 10px;
+        margin-top: -50px;
     }
 
 

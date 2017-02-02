@@ -20,7 +20,7 @@ app.run(function($http){   // Get All "Qoran" Books
 });
 
 
-
+// Main Controller
 app.controller('myCtrl', function($scope, $http){
     $scope.books = model;
     $scope.sortField = 'bookNo';
@@ -58,11 +58,10 @@ app.controller('myCtrl', function($scope, $http){
     }
 });
 
-
-
-
+// Collection of positive words
 var posKeywords = ["mercy ", "merciful ", "love ", "loves ", "loving", "loved", "heaven ", "heavens ", "happy", "peace", "calm ", "bless", "blessed ", "blessing ", "happiness", "married", "marriage", "marry ", "graced", "hope", "joy ", "joyed", "kindness", "trust", "trusts", "trusted", "tolerate", "trustful", "united", "unity"];
 
+// Collection of negative words
 var negKeywords = ["kill ", "hate ", "prison ", "murder ", "kills ", "hates ", "prisoners ", "adultery ", "death", " anger ", "angry ", " angers ", "fear ", "feared ", " die ", " died ", "death ", " dies ", "sad ", "sadness ", "war ", "wars", "hater ", "rape ", "raped", "rapes", "rapist", "revenge", "revenged", "killing", "killed", "persecute ", "grief ", "grieves ", " hell ", " lie ", " lies ", " lied ", "lying ", "murderer ", "murdered ", "murders ", " sin ", "sinned "];
 
 
@@ -78,4 +77,4 @@ app.filter('highlight', function($sce) {
         }
         return $sce.trustAsHtml(currentChapter)
     }
-  })
+})

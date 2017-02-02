@@ -9,16 +9,14 @@ $(function() {
     var descriptionOpen = 0;
     var sortOptionOpen = 0;
 
-
     // Control on -> Enable / Disable - Book Details
     var openBookDetails = function() {
-
         $(".bookSchema").on("click", function(){
             if(descriptionOpen==0){
                 descriptionOpen = 1;
                 $("#menu").css("width", "71%");
                 $("#menu").css("padding-left", "13%");
-                $(".bookDetails").css("right", "0%");
+                openedBookDetails();
             }
         });
 
@@ -26,10 +24,9 @@ $(function() {
             descriptionOpen = 0;
             $("#menu").css("width", "100%");
             $("#menu").css("padding-left", "20%");
-            $(".bookDetails").css("right", "-35%");
+            openedBookDetails();
         });
     }
-
 
     // Control on -> Enable / Disable / Resize - Graphs
     var resizeGraph = function() {
@@ -83,6 +80,7 @@ $(function() {
         });
     };
 
+    // This will resize the objects
     function resizeObjects(){
             totalOpens = showBook1+showBook2+showBook3;
             tempPadding = 20+(3-totalOpens)*8;
@@ -97,7 +95,6 @@ $(function() {
 
     // Control on -> Enable / Disable Sorting Options
     var openSortOptions = function() {
-
         $(".sortOpt").on("click", function(){
             if(sortOptionOpen==0){
                 sortOptionOpen = 1;
@@ -117,18 +114,70 @@ $(function() {
             $(this).children("span").show(200);
             $(this).children("span").css("position","relative");
             $(this).children("span").css("top","20px");
-            $(this).children("span").css("left","15px");
             $(this).children("span").css("font-size","10px");
             $(this).children("span").css("color","#000");
+            console.log($(window).width());
+            if( $(window).width() > 1120){
+                console.log("height");
+                $(this).children("span").css("left","15px");
+            } else {
+                console.log("low");
+                $(this).children("span").css("left","-14%");
+            }
+
+
         });
         $(document).on('mouseleave','.graphLine',function() {
             $(this).children("span").hide(200);
         });
     }
 
+    // Responsive - change div size and location while details open
+    var openedBookDetails = function() {
+        if( $(window).width() > 1120 ) {
+            if(descriptionOpen==1){
+                $(".bookDetails").css("position", "fixed");
+                $(".bookDetails").css("width", "35%");
+                $(".bookDetails").css("top", "0");
+                $(".bookDetails").css("right", "0%");
+                $(".bookDetails").css("padding", "30px");
+                $(".bookDetails").css("height", "100%");
+                $(".bookDetails").css("background", "rgba(128, 128, 128, 0.1)");
+            } else {
+                $(".bookDetails").css("position", "fixed");
+                $(".bookDetails").css("width", "35%");
+                $(".bookDetails").css("top", "0");
+                $(".bookDetails").css("right", "-35%");
+                $(".bookDetails").css("padding", "30px");
+                $(".bookDetails").css("height", "100%");
+                $(".bookDetails").css("background", "rgba(128, 128, 128, 0.1)");
+            }
+        } else {
+            if(descriptionOpen==1){
+                $(".bookDetails").css("position", "fixed");
+                $(".bookDetails").css("bottom", "0%");
+                $(".bookDetails").css("width", "100%");
+                $(".bookDetails").css("top", "auto");
+                $(".bookDetails").css("right", "0%");
+                $(".bookDetails").css("background", "#e6e6e6");
+                $(".bookDetails").css("height", "50%");
+                $(".bookDetails").css("padding", "1%");
+            } else {
+                $(".bookDetails").css("position", "fixed");
+                $(".bookDetails").css("bottom", "-50%");
+                $(".bookDetails").css("width", "100%");
+                $(".bookDetails").css("top", "auto");
+                $(".bookDetails").css("right", "0%");
+                $(".bookDetails").css("background", "#e6e6e6");
+                $(".bookDetails").css("height", "50%");
+                $(".bookDetails").css("padding", "1%");
+            }
+        }
+    }
+
     openBookDetails();
     resizeGraph();
     openSortOptions();
     graphLineHover();
-
+    openedBookDetails();
 });
