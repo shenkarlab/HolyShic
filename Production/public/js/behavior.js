@@ -36,13 +36,13 @@ $(function() {
                 showBook1 = 0;
                 $("#oldTestament").hide(200);
                 $(".titleBook1").hide(200);
-                $(".eye1").css("background-image", "url('../dev1/images/closed_eye_icon.png')");
+                $(".eye1").css("background-image", "url('images/closed_eye_icon.png')");
             }
             else {
                 showBook1 = 1;
                 $("#oldTestament").show(200);
                 $(".titleBook1").show(200);
-                $(".eye1").css("background-image", "url('../dev1/images/open_eye_icon.png')");
+                $(".eye1").css("background-image", "url('images/open_eye_icon.png')");
             }
             resizeObjects();
         });
@@ -52,13 +52,13 @@ $(function() {
                 showBook2 = 0;
                 $("#newTestament").hide(200);
                 $(".titleBook2").hide(200);
-                $(".eye2").css("background-image", "url('../dev1/images/closed_eye_icon.png')");
+                $(".eye2").css("background-image", "url('images/closed_eye_icon.png')");
             }
             else {
                 showBook2 = 1;
                 $("#newTestament").show(200);
                 $(".titleBook2").show(200);
-                $(".eye2").css("background-image", "url('../dev1/images/open_eye_icon.png')");
+                $(".eye2").css("background-image", "url('images/open_eye_icon.png')");
             }
             resizeObjects();
         });
@@ -68,13 +68,13 @@ $(function() {
                 showBook3 = 0;
                 $("#koran").hide(200);
                 $(".titleBook3").hide(200);
-                $(".eye3").css("background-image", "url('../dev1/images/closed_eye_icon.png')");
+                $(".eye3").css("background-image", "url('images/closed_eye_icon.png')");
             }
             else{
                 showBook3 = 1;
                 $("#koran").show(200);
                 $(".titleBook3").show(200);
-                $(".eye3").css("background-image", "url('../dev1/images/open_eye_icon.png')");
+                $(".eye3").css("background-image", "url('images/open_eye_icon.png')");
             }
             resizeObjects();
         });
